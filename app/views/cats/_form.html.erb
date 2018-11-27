@@ -1,0 +1,19 @@
+<%= form_for @cat do |t| %>
+<%= t.label :name %><br>
+<%= t.text_field :name %><br>
+<br>
+<%= t.label :sex %><br>
+<%= t.text_field :sex %><br>
+<br>
+<%= t.label :birth_date %><br>
+<%= t.date_field :birth_date %><br>
+<br>
+<%= t.label :color %><br>
+<%= t.text_field :color %><br>
+<br>
+<%= t.label :description %><br>
+<%= t.text_area :description %><br>
+<br>
+
+<%= t.submit %>
+<% end %>

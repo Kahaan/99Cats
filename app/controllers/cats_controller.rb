@@ -5,6 +5,7 @@ class CatsController < ApplicationController
 
   def show
     @cat = Cat.find(params[:id])
+    render 'show'
   end
 
   def new
@@ -21,6 +22,16 @@ class CatsController < ApplicationController
   end
 
   def edit
+    @cat = Cat.find(params[:id])
+  end
+
+  def update
+    @cat = Cat.find(params[:id])
+    if @cat.update(cat_params)
+      redirect_to @cat
+    else
+      render @cat.errors.full_messages
+    end
   end
 
 
